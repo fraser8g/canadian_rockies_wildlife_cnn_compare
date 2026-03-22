@@ -1,0 +1,10 @@
+# Python 3.11
+torch #PyTorch 2.1
+torchvision
+pillow
+matplotlib
+scikit-learn
+pandas
+numpy
+imagehash
+requests
