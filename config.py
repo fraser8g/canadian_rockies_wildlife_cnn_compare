@@ -30,11 +30,11 @@ PIN_MEMORY = torch.cuda.is_available()
 # ---Hyper parameters---
 BATCH_SIZE = 16
 NUM_WORKERS = 4
-NUM_EPOCHS = 50
+NUM_EPOCHS = 10 #50 - example training for baseline_cnn
 
 # Phase 1: classifier head only
-PHASE1_EPOCHS = 40
-PHASE1_LR = 5e-4 #0.001
+PHASE1_EPOCHS = 10
+PHASE1_LR = 1e-3 #0.001, 5e-4
 
 # Phase 2: fine-tuning
 PHASE2_EPOCHS = 10
