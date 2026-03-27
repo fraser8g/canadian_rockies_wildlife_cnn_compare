@@ -13,6 +13,8 @@ from pathlib import Path
 # Image manipulation (Pillow)
 # https://pillow.readthedocs.io/en/stable/
 from PIL import Image, UnidentifiedImageError
+
+# https://pypi.org/project/ImageHash/
 import imagehash
 
 VALID_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".jfif"}

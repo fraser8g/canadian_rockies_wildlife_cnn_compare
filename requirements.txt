@@ -1,10 +1,23 @@
-# Python 3.11
-torch #PyTorch 2.1
-torchvision
-pillow
-matplotlib
-scikit-learn
-pandas
-numpy
-imagehash
-requests
+# Manually Install Python 3.13 before running this.
+# https://www.python.org/downloads/release/python-31312/
+
+# Python Package Installer (pip) 26.0.1 will be required to install these.
+# https://pypi.org/project/pip/
+
+# PyTorch CNN Packages - include CUDA version for GPU training:
+torch==2.7.1 --index-url https://download.pytorch.org/whl/cu118 # 2.7.1 - https://docs.pytorch.org/docs/stable/index.html
+torchvision==0.22.1 # 0.22.1 - https://docs.pytorch.org/vision/stable/index.html
+
+# Data Analytics Packages:
+numpy # 2.4.3 - https://numpy.org/doc/stable/user/index.html
+pandas # 3.0.1 - https://pandas.pydata.org/docs/user_guide/index.html
+scikit-learn # 1.8.0 - https://scikit-learn.org/stable/api/sklearn.metrics.html
+
+# Visualization Plots and Charts Packages:
+matplotlib # 3.10.8 - https://matplotlib.org/stable/api/index.html
+seaborn # 0.13.2 - https://seaborn.pydata.org/api.html
+
+# Image Manipulation Packages:
+imagehash # 4.4.2 - https://pypi.org/project/ImageHash/
+pillow # 12.1.1 - https://pillow.readthedocs.io/en/stable/
+requests # 2.32.5 https://pypi.org/project/requests/

@@ -4,7 +4,7 @@ import torch
 
 # CNN Models
 MODELS = [
-    "baseline_cnn",
+    "wildlife_cnn",
     "convnext_tiny",
     "efficientnet_v2_s",
     "alexnet",
@@ -30,7 +30,7 @@ PIN_MEMORY = torch.cuda.is_available()
 # ---Hyper parameters---
 BATCH_SIZE = 16
 NUM_WORKERS = 4
-NUM_EPOCHS = 10 #50 - example training for baseline_cnn
+NUM_EPOCHS = 20 #50 - example training for wildlife_cnn
 
 # Phase 1: classifier head only
 PHASE1_EPOCHS = 10
@@ -41,7 +41,10 @@ PHASE2_EPOCHS = 10
 PHASE2_LR = 1e-4 #0.0001
 
 # Early stopping when no improvements
-PATIENCE = 6
+PATIENCE = 20
 
 # Loss settings
 LABEL_SMOOTHING = 0.05 #0.1
+
+# Flag to include pre-training weights
+INCLUDED_PRETRAINING = 1

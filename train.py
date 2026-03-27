@@ -18,7 +18,7 @@ import pandas as pd
 # https://matplotlib.org/stable/api/index.html
 import matplotlib.pyplot as plt
 
-from config import DEVICE, OUTPUT_DIR, MODELS, NUM_EPOCHS, PHASE1_EPOCHS, PHASE1_LR, PHASE2_EPOCHS, PHASE2_LR, PATIENCE, LABEL_SMOOTHING
+from config import DEVICE, OUTPUT_DIR, MODELS, NUM_EPOCHS, PHASE1_EPOCHS, PHASE1_LR, PHASE2_EPOCHS, PHASE2_LR, PATIENCE, LABEL_SMOOTHING, INCLUDED_PRETRAINING
 from dataset_utils import get_dataloaders
 from model_utils import build_model, save_checkpoint
 
@@ -179,7 +179,8 @@ def main():
     epochs_without_improvement = 0
 
     # Only freeze the backbone for pre-trained models for Phase 1
-    if args.model != "baseline_cnn": 
+    # and when pre-training weights are included.
+    if args.model != "wildlife_cnn" and INCLUDED_PRETRAINING == 1: 
         # Phase 1: train head only to adapt the model to the new dataset
         print("\n--- Phase 1: Training Classifier Head (Linear Layers) ---")
         freeze_all_except_classifier(model, args.model)
